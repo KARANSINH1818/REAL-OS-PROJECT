@@ -1,93 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-   <title>Operating-System-geration</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operating-System-Generation</title>
+
+<!-- Bootstrap 4 -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+    background-color:#24c79e;
+    font-family: Arial, sans-serif;
+}
+
+/* ================= TITLE EFFECT ================= */
+.main-title{
+    color:#ffe600;
+    transition:0.4s ease;
+    display:inline-block;
+}
+
+.main-title:hover{
+    transform:scale(1.1);
+    color:red;
+    text-shadow:0 0 20px red;
+}
+
+/* ================= NAVBAR TITLE ================= */
+.logo h1{
+    margin:0;
+    font-size:1.4rem;
+    color:#00ffff;   /* Different Color */
+}
+
+/* ================= DEFINITION HEADING ================= */
+.definition-title{
+    font-weight:bold;
+    display:inline-block;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.definition-title:hover{
+    color:#ff0000;
+    text-decoration: underline;
+}
+
+/* ================= AUTO COLOR ANIMATION ================= */
+.definition-text{
+    font-size:18px;
+    animation:colorChange 4s infinite alternate;
+}
+
+@keyframes colorChange{
+    0%{color:#000;}
+    25%{color:#ff00ff;}
+    50%{color:#0000ff;}
+    75%{color:#ff6600;}
+    100%{color:#008000;}
+}
+
+/* ================= BUTTON STYLE ================= */
+.theme-btn{
+    border:2px solid #00ffcc;
+    color:#00ffcc;
+    background-color:transparent;
+    transition:0.4s ease;
+    font-weight:bold;
+}
+
+.theme-btn:hover{
+    background-color:#00ffcc;
+    color:#000;
+    transform:scale(1.05);
+    box-shadow:0 0 15px #00ffcc;
+}
+
+/* ================= IMAGE EFFECTS ================= */
+.img1{
+    margin:10px;
+    max-width:100%;
+    height:auto;
+    border-radius:10px;
+    transition:0.4s;
+}
+
+.img1:hover{
+    transform:scale(1.1) rotate(2deg);
+    box-shadow:0 0 20px blue;
+}
+
+.img2{
+    margin:10px;
+    max-width:100%;
+    height:auto;
+    border-radius:10px;
+    transition:0.4s;
+}
+
+.img2:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 20px red;
+}
+
+/* Back To Home Button Red Color */
+.py-3 .theme-btn {
+    background-color: red;   /* Red */
+    color: #ffffff;              /* White Text */
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.py-3 .theme-btn:hover {
+    background-color: red;   /* Dark Red */
+    transform: scale(1.05);      /* Slight Zoom */
+    color: #ffffff;
+}
+
+/* Responsive */
+@media(max-width:576px){
+    .main-title{
+        font-size:22px;
+    }
+    .definition-text{
+        font-size:15px;
+    }
+}
+</style>
 </head>
+
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <body>
-        <style>
-          body{
-            background-color: rgb(36, 199, 158);
-          }
-        </style>
-      </body>
-      <div class="logo"><h1>File Attributes & File Operations</h1></div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <div class="m-2 p-2">
-                        <a href="file-attributes.html"><input class="btn btn-outline-light btn-lg form-control text-success" type="submit" name="submit" value="File-Attributes"></a>
-                      </div>
-                  </li>
-                  <li class="nav-item">
-                      <div class="m-2 p-2">
-				                <a href="file-operations.html"><input class="btn btn-outline-light btn-lg form-control text-warning" type="submit" name="submit" value="File-Operation"></a>
-                      </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="m-2 p-2">
-                      <a href="3.generation.html"><input class="btn btn-outline-light btn-lg form-control text-warning" type="submit" name="submit" value="3.Third Generation"></a>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="m-2 p-2">
-                      <a href="https://www.youtube.com/watch?v=wD0PrF3fGSY"><input class="btn btn-outline-success btn-lg form-control text-warning" type="submit" name="submit" value="About-Video"></a>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="m-2 p-2">
-                      <a href="contact.html"><input class="btn btn-outline-warning btn-lg form-control text-danger" type="submit" name="submit" value="Contact Us"></a>
-                    </div>
-                  </li>
-              </ul>
-          </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section id="creation" class="py-6">
-      <div class="container">
-      <style>
-        h1{
-          color: rgb(203, 232, 13);
-        }
-        p{
-          color: rgb(0, 0, 0);
-        }
-      </style>
-      <h1><u>File Attributes & File Operation :- </u></h1>
-      <p> <u>◊ Defination of File :- </u></p>
-        <p>A file is a collection of data or information that is stored under a specific name on a computer or other storage device. It serves as a unit of organization for data, and it can contain text, images, programs, or other types of information. Files are managed by file systems, and each file is uniquely identified by its filename and location within the file system.</p>
-        <p>Advatages Of Os Generation : </p>
-  </section>
-  <section id="creation" class="py-3">
-        <div class="text-center">
-  <img src= "./images/file-attribute.png" 
-          class="rounded float-end" height="400px;"width="500px"alt="FILE-ATTRIBITES"> 
 
-      <img src= "./images/file-operation.jpg" 
-          class="rounded float-end" height="400px;"width="500px"alt="FILE-OPERATIONS"> 
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
 
+<div class="logo">
+<h1>File Attributes & File Operations</h1>
 </div>
-  </section>
-  </main>
-  <footer class="py-5 aria-expanded bg-warning text-white text-center">
-    <div class="center">
-      copyright &copy; www.Os-Genration.com All Rights Reserved!
-    </div>
-  </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ml-auto">
+
+<li class="nav-item m-2">
+<a href="file-attributes.html" class="btn theme-btn btn-lg">File-Attributes</a>
+</li>
+
+<li class="nav-item m-2">
+<a href="file-operations.html" class="btn theme-btn btn-lg">File-Operation</a>
+</li>
+
+<li class="nav-item m-2">
+<a href="https://www.youtube.com/watch?v=wD0PrF3fGSY" 
+class="btn theme-btn btn-lg" target="_blank">About-Video</a>
+</li>
+
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="container py-4 text-center">
+
+<h1 class="main-title"><u>File Attributes & File Operation</u></h1>
+
+
+<p class="definition-text">
+A file is a collection of data stored under a specific name on a computer. 
+It can contain text, images, programs, or other information.
+Files are managed by file systems and identified by name and location.
+</p>
+
+<!-- IMAGES -->
+<div class="image-container py-3">
+<img src="./images/file-attribute.png" alt="File Attributes" class="img1">
+<img src="./images/file-operation.jpg" alt="File Operations" class="img2">
+</div>
+
+<!-- BACK BUTTON -->
+<div class="py-3">
+<a href="index.html" class="btn theme-btn btn-lg px-4">
+Back To Home
+</a>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<div class="text-center py-3 bg-dark text-white">
+© 2026 All Rights Reserved | Karansinh Mori
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

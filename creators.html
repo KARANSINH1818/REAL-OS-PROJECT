@@ -1,91 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>File Attributes & Operation</title>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Include Bootstrap CSS -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Optional: Add your own styles here -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet the Creators</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #4ecbb2;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Attributes & Operation - Creators</title>
 
-        .creators-container {
-            background-color: #cccccc;
-            border-radius: 10px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 400px;
-            margin: 20px;
-            padding: 20px;
-            box-sizing: border-box;
-            text-align: center;
-        }
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-        h2 {
-            color: #333;
-            font-size: 24px;
-            margin-bottom: 16px;
-        }
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #4ecbb2;
+      margin: 0;
+      padding: 0;
+    }
 
-        .creator {
-            margin-bottom: 20px;
-            transition: transform 0.3s ease-in-out;
-        }
+    .creators-container {
+      background-color: #cccccc;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
 
-        .creator img {
-            border-radius: 50%;
-            border: 5px solid #14d59b;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-        }
+    h2 {
+  color: #333;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s ease;
+}
 
-        .creator p {
-            color: #000000;
-            margin: 15px 6;
-        }
+h2::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: #14d59b;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
 
-        .creator:hover {
-            transform: scale(1.05);
-        }
-    </style>
+h2:hover {
+  color: #14d59b;
+}
+
+h2:hover::after {
+  width: 100%;
+}
+    .creator {
+      margin-bottom: 25px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .creator img {
+      border-radius: 50%;
+      border: 5px solid #14d59b;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    .creator p {
+      color: #000;
+      margin: 6px 0;
+    }
+
+    .creator:hover {
+      transform: scale(1.05);
+    }
+
+    .footer {
+      background-color: rgba(0,0,0,0.8);
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 576px) {
+      .creator img {
+        width: 100px;
+        height: 100px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+
+    .back-btn {
+  background-color: red;   /* Red color */
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+  background-color: red;   /* Dark Red on hover */
+  color: #fff;
+  transform: scale(1.05);      /* Slight zoom effect */
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+  </style>
 </head>
 <body>
 
-<div class="creators-container">
-    <h2>Creaters-details</h2>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8 col-12">
 
-    <div class="creator">
-        <img src="./images/karan.jpg" alt="Creator 1">
-        <p><strong>1.Mori KaranSinh</strong></p>
-        <p>EnrollMent No. : 226090307076</p>
-        <p>gmail-acc : karanmori674@gmail.com</p>
-    </div>
+        <div class="creators-container text-center">
+          <h2>Creators Details</h2>
 
- 
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <div class="m-3 p-3">
-                <a href="home.html"><input class="btn btn-outline-info btn-light form-control text-dark" type="submit" name="submit" value="Back To Home"></a>
-            </div>
-        </li>
-    </ul>
+          <!-- Creator 1 -->
+          <div class="creator">
+            <img src="./images/karan.jpg" alt="Creator 1" class="img-fluid">
+            <p><strong>1. Mori KaranSinh</strong></p>
+            <p>Enrollment No.: 226090307076</p>
+            <p>Email: karanmori674@gmail.com</p>
+          </div>
+
+          <div class="back-button text-center">
+  <a href="home.html" class="btn back-btn btn-lg btn-block">
+    Back To Home
+  </a>
 </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer text-center py-3">
+    &copy; 2026 All Rights Reserved | Karansinh Mori
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>

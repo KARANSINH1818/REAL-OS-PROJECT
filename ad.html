@@ -1,91 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> File Attributes & File Operations </title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File Attributes & File Operations</title>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+  background-image: url(./images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* Content Box */
+.content-box {
+  background-color: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+p {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+/* ================= ADVANTAGES (Green Auto Color Change) ================= */
+.adv-heading{
+  animation: greenChange 3s infinite alternate;
+}
+
+@keyframes greenChange {
+  0% { color: #28a745; }
+  50% { color: #00ff00; }
+  75% { color: #66ff66; }
+  100% { color: #28a745; }
+}
+
+/* ================= DISADVANTAGES (Red Auto Color Change) ================= */
+.dis-heading{
+  animation: redChange 3s infinite alternate;
+}
+
+@keyframes redChange {
+  50% { color: #ff0000; }
+  75% { color: #ff6666; }
+  100% { color: #dc3545; }
+}
+
+/* ================= BACK BUTTON ================= */
+.back-button a{
+  border: 2px solid #ff0000;
+  color: #ff0000;
+  transition: 0.4s;
+}
+
+.back-button a:hover{
+  background-color: #ff0000;
+  color: #fff;
+  transform: scale(1.08);
+  box-shadow: 0 0 15px red;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  p { font-size: 16px; }
+  h1 { font-size: 22px; }
+}
+
+.footer {
+  background-color: rgba(0,0,0,0.7);
+}
+</style>
 </head>
+
 <body>
-  <style type="text/css">
-    body{
-      background-image: url(designer.jpg);
-      background-size: cover;
-      height: 100vh;
-      background-position: 50% 50%;
-      width: 50% 50%;
-    }
-    h1{
-      color: rgb(62, 241, 53);
-    }
-    p{
-      color: rgb(3, 18, 31);
-      font-size: 34px;
-    }
-  </style>
-   <section id="creation" class="py-3">
-    <div class="container">
-      <h1 class="text-warning">File-Attributes of Advantages :-</h1>
-      <p class="text-light">File attributes offer several advantages in terms of organizing, managing, and securing data within a computer system. Here are some key advantages:
 
-<p class="text-success">1.Metadata Information</p>
-        
-<p class="text-success">2.File Organization</p>
-        
-<p class="text-success">3.Access Control</p>
-           
-<p class="text-success">4.Data Integrity</p>
-        
-<p class="text-success">5.File Versioning</p>
+<section class="py-5">
+  <div class="container">
+    <div class="content-box">
 
-<h1 class="text-warning">File-Attributes of Disadvantages :-</h1> 
+      <h1 class="adv-heading">File-Attributes Advantages</h1>
+      <p class="text-success">1. Metadata Information</p>
+      <p class="text-success">2. File Organization</p>
+      <p class="text-success">3. Access Control</p>
+      <p class="text-success">4. Data Integrity</p>
+      <p class="text-success">5. File Versioning</p>
 
-<p class="text-danger">1.Limited Standardization</p>
-        
-<p class="text-danger">2.Security Concerns</p>
-        
-<p class="text-danger">3.Potential for Misuse</p>
-    
-<p class="text-danger">4.Maintenance Overhead</p>
-           
-<p class="text-danger">5.Compatibility Issues</p>
-            
-<h1 class="text-warning">File-Operation of advantages :-</h1> 
+      <h1 class="dis-heading mt-4">File-Attributes Disadvantages</h1>
+      <p class="text-danger">1. Limited Standardization</p>
+      <p class="text-danger">2. Security Concerns</p>
+      <p class="text-danger">3. Potential for Misuse</p>
+      <p class="text-danger">4. Maintenance Overhead</p>
+      <p class="text-danger">5. Compatibility Issues</p>
 
-<p class="text-success">1.Easy To Create and Find Operation </p>
+      <h1 class="adv-heading mt-4">File-Operation Advantages</h1>
+      <p class="text-success">1. Easy to Create and Find</p>
+      <p class="text-success">2. Rename Existing File</p>
+      <p class="text-success">3. Delete and Reallocate Storage</p>
+      <p class="text-success">4. Easy Read & Write</p>
+      <p class="text-success">5. Easy Access via File Manager</p>
 
-<p class="text-success">2.Allow to Reaname of already set name of file </p>
+      <h1 class="dis-heading mt-4">File-Operation Disadvantages</h1>
+      <p class="text-danger">1. Time Consuming Search</p>
+      <p class="text-danger">2. File Fragmentation</p>
+      <p class="text-danger">3. Limited Versioning</p>
+      <p class="text-danger">4. Backup Challenges</p>
+      <p class="text-danger">5. Concurrency Issues</p>
 
-<p class="text-success">3.Dletion of created file and realloc storage</p>
+      <div class="back-button text-center mt-4">
+        <a href="home.html" class="btn btn-lg px-4">
+          Back To Home
+        </a>
+      </div>
 
-<p class="text-success">4.write and read Easy in file</p>
+    </div>
+  </div>
+</section>
 
-<p class="text-success">5.Easy access file under file Manager </p>
-
-<h1 class="text-warning">File-Operation of Disadvantages :-</h1> 
-
-<p class="text-danger">1.Time Consuming When We Find Aperticular File </p>
-
-<p class="text-danger">2.File fragmentation</p>
-
-<p class="text-danger">3.Limiting File Versioning </p>
-
-<p class="text-danger">4.Backup and recovery Challenges </p>
-
-<p class="text-danger">5.Concurrency issue </p>
-
-
-
-
+<div class="footer text-center py-3">
+  © 2026 All Rights Reserved | Karansinh Mori
 </div>
-  </section>
-  </section>
-  <ul class="navbar-nav">
-    <li class="nav-item">
-        <div class="m-3 p-3">
-            <a href="home.html"><input class="btn btn-outline-primary btn-lg form-control text-warning" type="submit" name="submit" value="Back To Home"></a>
-        </div>
-    </li>
-</ul>
+
 </body>
 </html>

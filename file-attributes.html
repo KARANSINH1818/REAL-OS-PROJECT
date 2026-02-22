@@ -1,64 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> File Attributes & File Operations </title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-  <style type="text/css">
-    body{
-      background-image: url(designer.jpg);
-      background-size: cover;
-      height: 100vh;
-      background-position: 50% 50%;
-      width: 50% 50%;
-    }
-    h1{
-      color: rgb(62, 241, 53);
-    }
-    p{
-      color: rgb(31, 5, 3);
-      font-size: 34px;
-    }
-  </style>
-   <section id="creation" class="py-3">
-    <div class="container">
-      <h1 class="text-danger">File-Attributes :-</h1>
-      <p class="text-warning">1. Name :- </p>
 
-          <p class="text-light"> - only information kept in human-readable form :- 
-            A String of alpha-numeric character and special symbol like (_) used by user to refer file.
-          </p>
-          <p class="text-warning">2. Identifier- Unique  Tag of file :-</p>
-          <p class="text-light"> - Uniquely identifies the file within the file system. Used by OS to refer file.</p>
-          <p class="text-warning">3. Type - needed for systems that support different types :-</p>
-          <p class="text-light"> - it generally expressed in the form of a file extension. For example, prog.cpp to indicate c++ 
-          file.</p>
-          <p class="text-warning">4. Location - pointer to file location on device :-</p>
-          <p class="text-light"> - Pointer to the device and location on the device of the file.</p>
-          <p class="text-warning">5. Size-current file size :-</p>
-          <p class="text-light"> - Specifies the size of file in bytes, word or blocks. And also maximum allowed size of file.</p>
-          <p class="text-warning">6. Protection :-</p>
-          <p class="text-light"> - It determines who can read file, write file, execute file and so on.</p>
-          <p class="text-warning">7. Usage count :-</p>
-          <p class="text-light"> - Indicates number of processes that are currently using this file.</P>
-    </div>
-  </section>
-  <section id="creation" class="py-3">
-        <div class="text-center">
-  <img src= "./images/file-attribute.png" 
-          class="rounded float-end" height="600px;"width="600px"alt="FILE-ATTRIBITES"> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File Attributes</title>
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    background-image: url(./images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* 🔥 Title Hover Pop + Red Glow */
+h1 {
+    color: rgb(62, 241, 53);
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+h1:hover {
+    transform: scale(1.1);
+    color: rgb(62, 241, 53);
+}
+
+/* Content Box */
+.attribute-box {
+    background-color: rgba(0,0,0,0.7);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+/* 🔄 Auto Color Changing Text */
+.attribute-box p:not(.text-warning) {
+    font-size: 18px;
+    animation: colorChange 5s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% { color: #ffffff; }
+    25% { color: #00ffff; }
+    50% { color: #ff00ff; }
+    75% { color: #ffff00; }
+    100% { color: #00ff00; }
+}
+
+/* Image Hover Pop */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: 0.4s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(255,0,0,0.7);
+}
+
+/* 🔴 Red Back Button */
+.red-btn {
+    background-color: red;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.red-btn:hover {
+    background-color: red;
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Responsive Adjust */
+@media (max-width: 576px) {
+    .attribute-box {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+<h1 class="text-center mb-4">File Attributes</h1>
+
+<div class="attribute-box">
+
+<p class="text-warning fw-bold">1. Name:</p>
+<p>- Only information kept in human-readable form. A string of alphanumeric characters and symbols like (_) used by the user.</p>
+
+<p class="text-warning fw-bold">2. Identifier - Unique Tag:</p>
+<p>- Uniquely identifies the file within the file system. Used by OS to refer to the file.</p>
+
+<p class="text-warning fw-bold">3. Type:</p>
+<p>- Expressed as a file extension, e.g., prog.cpp indicates a C++ file.</p>
+
+<p class="text-warning fw-bold">4. Location:</p>
+<p>- Pointer to the device and location on the device of the file.</p>
+
+<p class="text-warning fw-bold">5. Size:</p>
+<p>- Specifies the size of the file in bytes, words, or blocks.</p>
+
+<p class="text-warning fw-bold">6. Protection:</p>
+<p>- Determines who can read, write, or execute the file.</p>
+
+<p class="text-warning fw-bold">7. Usage Count:</p>
+<p>- Indicates the number of processes currently using this file.</p>
+
 </div>
-  </section>
-  </section>
-  <ul class="navbar-nav">
-    <li class="nav-item">
-        <div class="m-3 p-3">
-            <a href="home.html"><input class="btn btn-outline-success btn-lg form-control text-warning" type="submit" name="submit" value="Back To Home"></a>
-        </div>
-    </li>
-</ul>
+
+<!-- Image Section -->
+<div class="text-center mt-4 image-container">
+    <img src="./images/file-attribute.png" alt="File Attributes">
+</div>
+
+<!-- Back Button -->
+<div class="text-center mt-4">
+    <a href="home.html" class="btn red-btn btn-lg px-4">
+        Back To Home
+    </a>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer text-center py-3 mt-5">
+© 2026 All Rights Reserved | Karansinh Mori
+</div>
+
 </body>
 </html>
