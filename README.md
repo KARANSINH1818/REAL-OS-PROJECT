@@ -11,6 +11,14 @@ This project explains **File Attributes and File Operations** in a simple and st
 
 ---
 
+## 🚀 Live Deployment
+
+This project is deployed from the following link:
+
+🔗 https://real-os-project-karansinh-mori.netlify.app/
+
+---
+
 ## 🌐 Project Overview
 
 This website provides theoretical knowledge about:
