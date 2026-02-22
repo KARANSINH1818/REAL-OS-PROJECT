@@ -7,7 +7,7 @@ This project explains **File Attributes and File Operations** in a simple and st
 
 ## 🌐 Live Demo
 
-🔗 https://guessinggamekm.netlify.app/ 
+🔗 https://karansinh1818.github.io/REAL-OS-PROJECT/
 
 ---
 
